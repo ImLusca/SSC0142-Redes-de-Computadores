@@ -16,7 +16,7 @@ Olhando por cima, temos essas funçoes e strcuts com nomes e parâmetros bem aut
 
 ### structs
 
-A struct `SlowHeader` possui o formato do Header Slow e algumas funções helpers para getters e setters para as flags e sstl. Dentro da função `setSttlValue` existem alguns números mágicos que são as máscaras para extrair e modificar apenas o sttl do uint8_t.
+A struct `SlowHeader` possui o formato do Header Slow e algumas funções helpers para getters e setters para as flags e sstl. Dentro da função `setSttlValue` existem alguns números mágicos que são as máscaras para extrair e modificar apenas os 27 bits do `uint8_t` que representam o sttl.
 
 ### Funções Auxiliares
 
@@ -40,4 +40,4 @@ A struct `SlowHeader` possui o formato do Header Slow e algumas funções helper
 - espera o ACK da central para confirmar o disconnect.
 
 Se qualquer etapa dessas falhar, exceto a `sendData`, ela dá `return 1`encerrando a aplicação com erro.
-Caso a `sendData` falhe, o loop é quebrado e ela segue o fluxo de disconnect sem esperar a string "sair"
+Caso a `sendData` falhe, o loop é quebrado e ela segue o fluxo de disconnect sem esperar a string "sair".
