@@ -1,3 +1,4 @@
+// Lucas Pereira Pacheco - 12543930
 #include <iostream>
 #include <string>
 #include <vector>
@@ -376,7 +377,7 @@ int main() {
   }
 
   // espera Ack do Disconnect
-  centralLastSeqNum = peripheralSeqNum;
+  centralLastSeqNum = peripheralSeqNum - 3; // desconta o send/receive do disconnect para pegar o ACK do último pacote
   if (!handleAck(sockfd, centralAddr, centralLastSeqNum)) {
     close(sockfd);
     return 1;
