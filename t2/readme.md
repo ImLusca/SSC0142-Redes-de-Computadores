@@ -9,7 +9,7 @@ Pra buildar pra debug:
 `g++ -g -O0 -o mainDbg main.cpp`
 
 
-# Explicação do proejto:
+# Explicação do projeto:
 
 Olhando por cima, temos essas funçoes e strcuts com nomes e parâmetros bem auto explicativos:
 ![image](https://github.com/user-attachments/assets/6af53ce6-6605-4ac7-880f-7cffe26a063b)
